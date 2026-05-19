@@ -11,9 +11,9 @@ Binary classifier between tuberculosis (TB) or normal, with class imbalance (700
 
 ## Outline??
 1. [x] Dataset analysis: Class distribution, image samples, dataset splits
-2. [ ] **Això potser no fa falta?** Baseline model: simple CNN or pretrained ResNet with no special things. **Serves as baseline, reference point**
-3. [ ] Transfer learning: with one/two models. Could allow for model comparison. Should consider same training conditions (split, optimizer, epochs, image size). Pick the best out of the two for the other steps.
-    * [x] ResNet50
+2. [ ] **Això potser no fa falta? tampoc aporta res de nou** Baseline model: simple CNN or pretrained ResNet with no special things. **Serves as baseline, reference point**
+3. [x] Transfer learning: with one/two models. Could allow for model comparison. Should consider same training conditions (split, optimizer, epochs, image size). Pick the best out of the two for the other steps.
+    * [x] ResNet18
     * [x] EfficientNetB0
 4. [ ] Imbalance comparison: compare model performance with:
     * no correction (dataset as it is)
