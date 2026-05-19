@@ -15,14 +15,14 @@ Binary classifier between tuberculosis (TB) or normal, with class imbalance (700
 3. [ ] Transfer learning: with one/two models. Could allow for model comparison. Should consider same training conditions (split, optimizer, epochs, image size). Pick the best out of the two for the other steps.
     * [x] ResNet50
     * [x] EfficientNetB0
-4. [ ] Hyperparameter tuning. Tune learning rate, batch size, and frozen / partially unfrozen backbone
-    * F1 score for different param values? (lab 2 alguna cosa similar amb lasso)
-5. [ ] Imbalance comparison: compare model performance with:
+4. [ ] Imbalance comparison: compare model performance with:
     * no correction (dataset as it is)
     * class weights
     * oversampling TB (duplicate images)
     * downsampling NORMAL (ignore normal images)
     * data augmentation for TB (add noise, rotations, zoom, brightness/contrast). Careful with flipping, as it changes biological structure (heart is not on the right side)
+5. [ ] Hyperparameter tuning. Tune learning rate, batch size, and frozen / partially unfrozen backbone
+    * F1 score for different param values? (lab 2 alguna cosa similar amb lasso)
 6. [ ] Evaluation: 
     * conf. matrix, precision, recall, F1, AUC.
     * training / validation loss curves, accuracy curves,
