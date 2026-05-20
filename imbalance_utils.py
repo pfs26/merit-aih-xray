@@ -9,14 +9,9 @@ from torch.utils.data import DataLoader, WeightedRandomSampler
 import utils
 
 
-# ─────────────────────────────────────────────
-# 1. CLASS WEIGHTS
-# ─────────────────────────────────────────────
-
 def get_class_weights(train_set):
     """
     Function that computes inverse-frequency class weights for a given training dataset.
-
     """
     targets=train_set.targets
 
