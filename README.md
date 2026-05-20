@@ -15,7 +15,7 @@ Binary classifier between tuberculosis (TB) or normal, with class imbalance (700
 3. [x] Transfer learning: with one/two models. Could allow for model comparison. Should consider same training conditions (split, optimizer, epochs, image size). Pick the best out of the two for the other steps.
     * [x] ResNet18
     * [x] EfficientNetB0
-4. [ ] Imbalance comparison: compare model performance with:
+4. [x] Imbalance comparison: compare model performance with:
     * no correction (dataset as it is)
     * class weights
     * oversampling TB (duplicate images)
