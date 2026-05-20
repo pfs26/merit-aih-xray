@@ -26,8 +26,8 @@ dirs = {
 #Set of transformations to be applied to the images
 transform = {
     'train': transforms.Compose([
+        transforms.Grayscale(num_output_channels=3), # to remove blueish color from TB class
         transforms.Resize((224, 224)),
-        # transforms.RandomHorizontalFlip(),
         transforms.ToTensor(),
         transforms.Normalize(
             mean=[0.485, 0.456, 0.406],
@@ -35,6 +35,7 @@ transform = {
         )
     ]),
     'test': transforms.Compose([
+        transforms.Grayscale(num_output_channels=3),
         transforms.Resize((224, 224)),
         transforms.ToTensor(),
         transforms.Normalize(
