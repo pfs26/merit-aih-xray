@@ -71,3 +71,10 @@ def deprocess_image(image):
     image = image * np.array((0.229, 0.224, 0.225)) + np.array((0.485, 0.456, 0.406))
     image = image.clip(0, 1)
     return image
+
+# gets a resnet18 model, with the final layer modified to output the correct number of classes, and moved to the correct device
+def get_resnet18(out_classes, pretrained=True):
+    resnet18 = torch.hub.load('pytorch/vision:v0.10.0', 'resnet18', pretrained=False)
+    resnet18.fc = torch.nn.Linear(resnet18.fc.in_features, out_classes)
+    resnet18.to(device)
+    return resnet18
